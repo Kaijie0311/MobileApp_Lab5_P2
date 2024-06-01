@@ -65,82 +65,83 @@ class _Factory1DashboardState extends State<Factory1Dashboard> {
           )
         ],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              Container(
-                padding: EdgeInsets.all(16),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black26,
-                      blurRadius: 4,
-                      offset: Offset(2, 2),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(Icons.warning),
-                    SizedBox(height: 8),
-                    Text(
-                      'ABD1234 IS UNREACHABLE !',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                child: Container(
+                  padding: EdgeInsets.all(16),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 4,
+                        offset: Offset(2, 2),
                       ),
-                    ),
-                    SizedBox(height: 16),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        _buildGauge(
-                            'Steam Pressure', '0.0', 'bar', Colors.grey),
-                        _buildGauge('Steam Flow', '0.0', 'T/H', Colors.grey),
-                      ],
-                    ),
-                    SizedBox(height: 8),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        _buildGauge('Water Level', '0.0', '%', Colors.grey),
-                        _buildGauge(
-                            'Power Frequency', '0.0', 'Hz', Colors.grey),
-                      ],
-                    ),
-                    SizedBox(height: 16),
-                    Text('2024-04-26 13:45:25'),
-                  ],
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Icon(Icons.warning),
+                      SizedBox(height: 8),
+                      Text(
+                        'ABD1234 IS UNREACHABLE !',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 24),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          _buildGauge(
+                              'Steam Pressure', '0.0', 'bar', Colors.grey),
+                          _buildGauge('Steam Flow', '0.0', 'T/H', Colors.grey),
+                        ],
+                      ),
+                      SizedBox(height: 40),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          _buildGauge('Water Level', '0.0', '%', Colors.grey),
+                          _buildGauge(
+                              'Power Frequency', '0.0', 'Hz', Colors.grey),
+                        ],
+                      ),
+                      SizedBox(height: 40),
+                      Text('2024-04-26 13:45:25'),
+                    ],
+                  ),
                 ),
               ),
-              SizedBox(height: 16),
-              Container(
-                height: 160,
-                width: MediaQuery.of(context).size.width * 0.84,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    _buildFactoryButton(context, 'Factory 1',
-                        selected: selectedFactory == 'Factory 1'),
-                    _buildFactoryButton(context, 'Factory 2',
-                        selected: selectedFactory == 'Factory 2'),
-                    _buildFactoryButton(context, 'Factory 3',
-                        selected: selectedFactory == 'Factory 3'),
-                    _buildFactoryButton(context, 'Factory 4',
-                        selected: selectedFactory == 'Factory 4'),
-                    _buildFactoryButton(context, 'Factory 5',
-                        selected: selectedFactory == 'Factory 5'),
-                  ],
-                ),
+            ),
+            SizedBox(height: 16),
+            Container(
+              height: 160,
+              width: MediaQuery.of(context).size.width * 0.84,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  _buildFactoryButton(context, 'Factory 1',
+                      selected: selectedFactory == 'Factory 1'),
+                  _buildFactoryButton(context, 'Factory 2',
+                      selected: selectedFactory == 'Factory 2'),
+                  _buildFactoryButton(context, 'Factory 3',
+                      selected: selectedFactory == 'Factory 3'),
+                  _buildFactoryButton(context, 'Factory 4',
+                      selected: selectedFactory == 'Factory 4'),
+                  _buildFactoryButton(context, 'Factory 5',
+                      selected: selectedFactory == 'Factory 5'),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
