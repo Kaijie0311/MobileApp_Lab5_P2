@@ -105,7 +105,7 @@ class _Factory1DashboardState extends State<Factory1Dashboard> {
                           _buildGauge('Steam Flow', '0.0', 'T/H', Colors.grey),
                         ],
                       ),
-                      SizedBox(height: 40),
+                      SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -114,7 +114,7 @@ class _Factory1DashboardState extends State<Factory1Dashboard> {
                               'Power Frequency', '0.0', 'Hz', Colors.grey),
                         ],
                       ),
-                      SizedBox(height: 40),
+                      SizedBox(height: 25),
                       Text('2024-04-26 13:45:25'),
                     ],
                   ),

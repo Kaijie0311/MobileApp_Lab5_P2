@@ -107,7 +107,7 @@ class _Invitation2State extends State<Invitation2> {
                 onPressed: () {
                   Navigator.pop(context, {
                     'name': nameController.text,
-                    'phone': phoneController.text,
+                    'phone': '+60' + phoneController.text,
                   });
                 },
                 style: ElevatedButton.styleFrom(
