@@ -11,7 +11,7 @@ workflows:
       cocoapods: default
       vars:
         FIREBASE_PROJECT: "mobileapplab6-480e0"
-    script:
+    scripts:
       - name: Get Flutter packages
         script: |
           flutter packages pub get
