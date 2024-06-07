@@ -50,7 +50,7 @@ void main() {
 
       // Verify the Factory1Dashboard is rendered
       // Update the following line to match the actual text or widget in your Factory1Dashboard
-      expect(find.text('Factory 1 Dashboard'), findsOneWidget);
+      expect(find.text('Factory 1'), findsOneWidget);
     });
   });
 }
